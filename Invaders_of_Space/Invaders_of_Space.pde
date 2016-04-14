@@ -57,35 +57,14 @@ void game()
   player();
 }
 
-void gameManager()
+void draw()
 {
-  if(splashScreen == true)
-  {
-    splashScreen();
-    menu = false;
-    game = false;
-    gameOver = false;
-  }
+  background(0);
+  
+  splashScreen();
   
   if(menu == true)
   {
     menu();
-    splashScreen = false;
-    game = false;
-    gameOver = false;
   }
-  
-  if(game == true)
-  {
-     game();
-     menu = false;
-     splashScreen = false;
-     gameOver = false;
-  }
-}
-
-void draw()
-{
-  background(0);
-  gameManager();
 }

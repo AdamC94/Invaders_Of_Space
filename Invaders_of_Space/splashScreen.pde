@@ -24,4 +24,12 @@ void splashScreen()
   {
     splashScreenBackgroundAlpha = splashScreenBackgroundAlpha -= fadeSpeedBackground;
   }
+  
+  if(splashScreenBackgroundAlpha <= 0)
+  {
+     splashScreen = false;
+     menu = true;
+     game = false;
+     gameOver = false;
+  }
 }
