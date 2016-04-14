@@ -1,7 +1,12 @@
 void start()
 {
   size(1000, 800);
+  
+  font = loadFont("8BITWONDERNominal-48.vlw");
+  textFont(font);
 }
+
+PFont font;
 
 float Width = 1000;
 float Height = 800;
@@ -46,5 +51,6 @@ void player()
 void draw()
 {
   background(0);
+  menu();
   player();
 }
