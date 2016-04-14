@@ -12,6 +12,7 @@ void menu()
 
 void Title()
 {
+  textFont(font);
   textAlign(CENTER, CENTER);
   textSize(titleSize);
   fill(0);
