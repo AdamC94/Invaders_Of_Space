@@ -15,6 +15,11 @@ float playerY = Height - playerHeight - playerHalfHeight;
 boolean playerMoveSwitch = true;
 float playerSpeed = 5;
 
+boolean splashScreen = false;
+boolean menu = false;
+boolean game = false;
+boolean gameOver = false;
+
 void player()
 {
   rect(playerX, playerY, playerWidth, playerHeight);
