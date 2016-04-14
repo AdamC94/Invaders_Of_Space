@@ -7,7 +7,7 @@ void menu()
 }
 
 float TitleX = Width / 2;
-float TitleY = Height / 2;
+float TitleY = 50;
 String Title = "INVADERS OF SPACE";
 float titleSize = 48;
 
@@ -20,13 +20,12 @@ void Title()
   text(Title, TitleX, TitleY);
 }
 
-float startButtonBackgroundWidth = 500;
-float startButtonBackgroundHeight = 500;
+float startButtonBackgroundWidth = 250;
+float startButtonBackgroundHeight = 60;
 float startButtonBackgroundhalfWidth = startButtonBackgroundWidth / 2;
 float startButtonBackgroundhalfHeight = startButtonBackgroundHeight /2;
 float startButtonBackgroundX = Width / 2 - startButtonBackgroundhalfWidth;
-float startButtonBackgroundY;
-
+float startButtonBackgroundY = 350;
 float startTextX = startButtonBackgroundX + startButtonBackgroundhalfWidth;
 float startTextY = startButtonBackgroundY + startButtonBackgroundhalfHeight;
 float startTextSize = 30;

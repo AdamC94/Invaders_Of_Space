@@ -1,5 +1,5 @@
 float splashScreenBackgroundAlpha = 255;
-float fadeSpeedBackground = 5;
+float fadeSpeedBackground = 10;
 
 float logoWidth = 512;
 float logoHeight = 512;
@@ -9,7 +9,7 @@ float logoX = Width / 2 - logoHalfWidth;
 float logoY = Height / 2 - logoHalfHeight;
 
 float logoAlpha = 255;
-float logoFadeSpeed = 5;
+float logoFadeSpeed = 10;
 
 void splashScreen()
 {
