@@ -1,9 +1,10 @@
 void menu()
 {
-  fill(255);
+  fill(0);
   rect(0, 0, Width, Height);
   Title();
   startButton();
+  quitButton();
 }
 
 float TitleX = Width / 2;
@@ -16,7 +17,7 @@ void Title()
   textFont(font);
   textAlign(CENTER, CENTER);
   textSize(titleSize);
-  fill(0);
+  fill(255);
   text(Title, TitleX, TitleY);
 }
 
@@ -38,4 +39,24 @@ void startButton()
   fill(0);
   textAlign(CENTER, CENTER);
   text(startButtonText, startTextX, startTextY);
+}
+
+float quitButtonBackgroundWidth = 250;
+float quitButtonBackgroundHeight = 60;
+float quitButtonBackgroundhalfWidth = quitButtonBackgroundWidth / 2;
+float quitButtonBackgroundhalfHeight = quitButtonBackgroundHeight / 2;
+float quitButtonBackgroundX = Width / 2 - quitButtonBackgroundhalfWidth;
+float quitButtonBackgroundY = 500;
+float quitTextX = quitButtonBackgroundX + quitButtonBackgroundhalfWidth;
+float quitTextY = quitButtonBackgroundY + quitButtonBackgroundhalfHeight;
+float quitTextSize = 30;
+String quitButtonText = "quit";
+
+void quitButton()
+{
+  fill(155);
+  rect(quitButtonBackgroundX, quitButtonBackgroundY, quitButtonBackgroundWidth, quitButtonBackgroundHeight);
+  fill(0);
+  textAlign(CENTER, CENTER);
+  text(quitButtonText, quitTextX, quitTextY);
 }
