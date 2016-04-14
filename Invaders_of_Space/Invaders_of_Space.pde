@@ -51,6 +51,7 @@ void player()
 void draw()
 {
   background(0);
+  splashScreen();
   menu();
   player();
 }
