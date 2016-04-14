@@ -4,9 +4,13 @@ void start()
   
   font = loadFont("8BITWONDERNominal-48.vlw");
   textFont(font);
+  
+  logo = loadImage("logo.png");
 }
 
 PFont font;
+
+PImage logo;
 
 float Width = 1000;
 float Height = 800;
@@ -20,7 +24,7 @@ float playerY = Height - playerHeight - playerHalfHeight;
 boolean playerMoveSwitch = true;
 float playerSpeed = 5;
 
-boolean splashScreen = false;
+boolean splashScreen = true;
 boolean menu = false;
 boolean game = false;
 boolean gameOver = false;
@@ -48,10 +52,40 @@ void player()
   }
 }
 
+void game()
+{
+  player();
+}
+
+void gameManager()
+{
+  if(splashScreen == true)
+  {
+    splashScreen();
+    menu = false;
+    game = false;
+    gameOver = false;
+  }
+  
+  if(menu == true)
+  {
+    menu();
+    splashScreen = false;
+    game = false;
+    gameOver = false;
+  }
+  
+  if(game == true)
+  {
+     game();
+     menu = false;
+     splashScreen = false;
+     gameOver = false;
+  }
+}
+
 void draw()
 {
   background(0);
-  splashScreen();
-  menu();
-  player();
+  gameManager();
 }
