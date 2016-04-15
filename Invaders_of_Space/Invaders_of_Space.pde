@@ -58,13 +58,16 @@ void game()
 }
 
 void draw()
-{
-  background(0);
-  
+{ 
   splashScreen();
   
-  if(menu == true)
+  if(splashScreen == false && menu == true && game == false && gameOver == false)
   {
     menu();
+  }
+  
+  if(splashScreen == false && menu == false && game == true && gameOver == false)
+  {
+    game();
   }
 }
