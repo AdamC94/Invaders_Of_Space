@@ -39,6 +39,14 @@ void startButton()
   fill(0);
   textAlign(CENTER, CENTER);
   text(startButtonText, startTextX, startTextY);
+  
+  if( mouseX >= startButtonBackgroundX && mouseX >= startButtonBackgroundX + startButtonBackgroundWidth && mouseY >= startButtonBackgroundY && mouseY <= startButtonBackgroundY + startButtonBackgroundHeight && mousePressed)
+  {
+     splashScreen = false;
+     menu = false;
+     game = true;
+     gameOver = false;
+  }
 }
 
 float quitButtonBackgroundWidth = 250;
