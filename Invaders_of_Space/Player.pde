@@ -1,7 +1,23 @@
+float playerWidth = 125;
+float playerHeight = 35;
+float playerHalfWidth = playerWidth / 2;
+float playerHalfHeight = playerHeight / 2;
+float playerX = Width / 2 - playerHalfWidth;
+float playerY = Height - playerHeight - playerHalfHeight;
+
+float playerHatchWidth = playerWidth / 1.5;
+float playerHatchHeight = playerHeight / 4;
+float playerHatchHalfWidth = playerHatchWidth / 2;
+float playerHatchHalfHeight = playerHatchHeight / 2;
+
+boolean playerMoveSwitch = true;
+float playerSpeed = 5;
+
 void player()
 {
   fill(255);
   rect(playerX, playerY, playerWidth, playerHeight);
+  rect(playerX + playerHalfWidth - playerHatchHalfWidth, playerY - playerHatchHeight, playerHatchWidth, playerHatchHeight);
   noFill();
   
   if(keyPressed)
