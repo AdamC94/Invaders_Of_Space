@@ -40,12 +40,16 @@ void startButton()
   textAlign(CENTER, CENTER);
   text(startButtonText, startTextX, startTextY);
   
-  if( mouseX >= startButtonBackgroundX && mouseX >= startButtonBackgroundX + startButtonBackgroundWidth && mouseY >= startButtonBackgroundY && mouseY <= startButtonBackgroundY + startButtonBackgroundHeight && mousePressed)
+  if( mouseX >= startButtonBackgroundX && mouseX <= startButtonBackgroundX + startButtonBackgroundWidth && mouseY >= startButtonBackgroundY && mouseY <= startButtonBackgroundY + startButtonBackgroundHeight && mousePressed)
+  {
+    gameState = 1;
+  }
+  if(gameState == 1)
   {
      splashScreen = false;
      menu = false;
-     game = true;
      gameOver = false;
+     game = true;
   }
 }
 

@@ -28,10 +28,13 @@ boolean splashScreen = true;
 boolean menu = false;
 boolean game = false;
 boolean gameOver = false;
+int gameState = 0;
 
 void player()
 {
+  fill(255);
   rect(playerX, playerY, playerWidth, playerHeight);
+  noFill();
   
   if(keyPressed)
   {
@@ -61,13 +64,13 @@ void draw()
 { 
   splashScreen();
   
-  if(splashScreen == false && menu == true && game == false && gameOver == false)
+  if(menu == true)
   {
     menu();
   }
   
-  if(splashScreen == false && menu == false && game == true && gameOver == false)
+  if(game == true)
   {
-    game();
+    player();
   }
 }
