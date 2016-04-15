@@ -71,4 +71,9 @@ void quitButton()
   fill(0);
   textAlign(CENTER, CENTER);
   text(quitButtonText, quitTextX, quitTextY);
+  
+  if( mouseX >= quitButtonBackgroundX && mouseX <= quitButtonBackgroundX + quitButtonBackgroundWidth && mouseY >= quitButtonBackgroundY && mouseY <= quitButtonBackgroundY + quitButtonBackgroundHeight && mousePressed)
+  {
+    exit();
+  }
 }
