@@ -71,6 +71,6 @@ void draw()
   
   if(game == true)
   {
-    player();
+    game();
   }
 }
