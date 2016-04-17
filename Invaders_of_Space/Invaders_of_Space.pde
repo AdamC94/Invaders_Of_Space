@@ -6,6 +6,9 @@ void start()
   textFont(font);
   
   logo = loadImage("logo.png");
+  
+  // initialising
+  Bullet = new bullet();
 }
 
 PFont font;

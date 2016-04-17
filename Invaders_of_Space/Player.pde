@@ -37,4 +37,6 @@ void player()
       playerMoveSwitch = false;
     }
   }
+  
+  Bullet.update();
 }

@@ -1,6 +1,23 @@
-float bulletX1;
-float bulletY1;
-float bulletX2;
-float bulletY2;
+//type and instance
+bullet Bullet;
 
-float bulletSpeed;
+class bullet
+{
+  //global variables
+  float x = 0;
+  float y = 0;
+  
+  //constructor
+  bullet()
+  {
+    
+  }
+  
+  //functions
+  
+  void update()
+  {
+    fill(255);
+    ellipse(200, 200, 20, 20);
+  }
+}
