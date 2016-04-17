@@ -4,20 +4,26 @@ bullet Bullet;
 class bullet
 {
   //global variables
-  float x = 0;
-  float y = 0;
+  float laserX1 = 500;
+  float laserY1 = 500;
+  float laserX2 = 500;
+  float laserY2 = 520;
+  float speed = 5;
   
   //constructor
   bullet()
   {
-    
   }
   
   //functions
   
   void update()
   {
-    fill(255);
-    ellipse(200, 200, 20, 20);
+    stroke(255);
+    strokeWeight(5);
+    line(laserX1, laserY1, laserX2, laserY2);
+    
+    laserY1 -= speed;
+    laserY2 -= speed;
   }
 }
