@@ -11,7 +11,7 @@ void start()
   
   drawAliens();
   
-  // initialising
+  bullets = new ArrayList<Bullet>();
 }
 
 PFont font;

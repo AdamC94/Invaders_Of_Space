@@ -14,6 +14,11 @@ float playerBarrelWidth = playerHatchWidth / 3;
 float playerBarrelHeight = 20;
 float playerBarrelHalfWidth = playerBarrelWidth / 2;
 float playerBarrelHalfHeight = playerBarrelHeight / 2;
+float playerBarrelX = playerX + playerHalfWidth - playerBarrelHalfWidth;
+float playerBarrelY = playerY - playerHatchHeight - playerBarrelHeight;
+
+float firePointX = playerBarrelX + playerBarrelHalfWidth;
+float firePointY = playerBarrelY;
 
 boolean playerMoveSwitch = true;
 float playerSpeed = 5;
@@ -26,7 +31,7 @@ void player()
   fill(255);
   rect(playerX, playerY, playerWidth, playerHeight);
   rect(playerX + playerHalfWidth - playerHatchHalfWidth, playerY - playerHatchHeight, playerHatchWidth, playerHatchHeight);
-  rect(playerX + playerHalfWidth - playerBarrelHalfWidth, playerY - playerHatchHeight - playerBarrelHeight, playerBarrelWidth, playerBarrelHeight);
+  rect(playerBarrelX , playerBarrelY, playerBarrelWidth, playerBarrelHeight);
   noFill();
   
   if(keyPressed)
@@ -44,6 +49,24 @@ void player()
     if(playerX <= 0 && playerMoveSwitch == true || playerX >= width - playerWidth)
     {
       playerMoveSwitch = false;
-    } 
+    }
+   
+    if( key == ' ')
+   {
+     if(canShoot == true)
+     {
+       bullets.add( new Bullet());
+       canShoot = false;
+       canShootCounter = 0;
+     }
+   }
+  if( canShoot == false)
+ {
+   canShootCounter ++;
+   if( canShootCounter == 5)
+   {
+     canShoot = true;
+   }
+ } 
   }
 }

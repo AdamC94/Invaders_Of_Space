@@ -1,31 +1,35 @@
 //type and instance
-bullet Bullet;
+//bullet Bullet;
 
-class bullet
+ArrayList <Bullet> bullets;
+int i;
+
+
+class Bullet
 {
-  //global variables
-  float laserX1 = 500;
-  float laserY1 = 500;
-  float laserX2 = 500;
-  float laserY2 = 520;
-  float speed = 5;
+  PVector location;
   
-  //constructor
-  bullet()
+  float oldPosX, oldPosY, speed, rotation;
+  Bullet()
   {
-    
+    location = new PVector( firePointX, firePointY);
+    speed = 10;
   }
-  
-  //functions
   
   void update()
   {
-    stroke(255);
-    strokeWeight(5);
-    line(laserX1, laserY1, laserX2, laserY2);
-    noStroke();
+    location.y = location.y - cos(rotation / 180 * PI) * speed;
+    fill(255, 0, 0);
+    ellipse(location.x, location.y, 10, 10);
+    noFill();
     
-    laserY1 -= speed;
-    laserY2 -= speed;
+    if(location.x > 0 && location.x < width && location.y > 0 && location.x < height)
+    {
+     
+    }
+    else
+    {
+      bullets.remove(i);
+    }
   }
 }
