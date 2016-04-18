@@ -13,6 +13,7 @@ class bullet
   //constructor
   bullet()
   {
+    
   }
   
   //functions
@@ -22,6 +23,7 @@ class bullet
     stroke(255);
     strokeWeight(5);
     line(laserX1, laserY1, laserX2, laserY2);
+    noStroke();
     
     laserY1 -= speed;
     laserY2 -= speed;
