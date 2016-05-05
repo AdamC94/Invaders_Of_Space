@@ -7,4 +7,7 @@ void game()
     Bullet bullet = bullets.get(i);
     bullet.update();
   }
+  Aliens();
+  Score();
+  playerLives();
 }

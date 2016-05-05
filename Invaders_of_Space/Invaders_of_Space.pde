@@ -9,7 +9,6 @@ void start()
   
   logo = loadImage("logo.png");
   
-  drawAliens();
   
   bullets = new ArrayList<Bullet>();
 }
@@ -48,20 +47,10 @@ void draw()
   if(game == true)
   {
     game();
-    
-    for (int row = 0 ; row < rows ; row ++)
-    {
-      for (int col = 0 ; col < cols ; col ++)
-      {
-        float x = col * alienWidth + gridX;
-        float y = row * alienHeight + gridY;
-        
-        if (board[row][col])
-        {
-          fill(0, 255, 0);
-          rect( x , y, alienWidth, alienHeight);
-        }
-      }
-    }
+  }
+  
+  if(gameOver == true)
+  {
+    gameOver();
   }
 }
